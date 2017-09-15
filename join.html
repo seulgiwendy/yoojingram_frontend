@@ -91,7 +91,7 @@
                                 <form>
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1">ID</span>
-                                    <input type="text" class="form-control" placeholder="User ID" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" placeholder="User ID" id="id" aria-describedby="basic-addon1" oninput="checkId()" required>
 
                                 </div>
                                     <br>
@@ -99,11 +99,15 @@
                                     <br>
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon2">Password</span>
-                                    <input type="text" class="form-control" placeholder="비번" aria-describedby="basic-addon2">
+                                    <input type="password" class="form-control" id="pwd" placeholder="비번" aria-describedby="basic-addon2" oninput="checkPwd()" required>
 
                                 </div>
                                     <br>
-                                    <button type="submit" class="btn btn-success" disabled>가입하기</button>
+                                    <div class="alert alert-warning" id="pwd-warning" style="display: none"><span class="glyphicon glyphicon-exclamation-sign"></span> 앗! 비번이 넘나 짧습니다. <br> 비번은 6글자 이상이어야 됩니다. <br>그래도 특수문자 넣으란 얘기는 안 할게!</div>
+                                    <br>
+                                    <br>
+
+                                    <button type="submit" class="btn btn-success" id="join-submit" disabled>가입하기</button>
                                     <button type="reset" class="btn btn-danger">다시 작성하기</button>
                                 </form>
                             </div>
@@ -130,6 +134,7 @@
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <!-- Bootstrap Js CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/join.js"></script>
 
 
     <script type="text/javascript">
