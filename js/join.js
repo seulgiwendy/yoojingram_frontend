@@ -1,5 +1,6 @@
 var idCheck = true;
 var pwdCheck = false;
+var url = "http://localhost:8080/api/join/checkid";
 
 function setJoinButtonActive() {
     if (idCheck && pwdCheck == true){
@@ -19,6 +20,39 @@ function checkId(){
 
     var input = $('#id').val();
     console.log(input);
+
+    if (input.length > 0 &&input.length < 6){
+        idCheck = false;
+        $('#id-short-warning').show();
+    }
+    else {
+        $('#id-short-warning').hide();
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: input,
+            error: function () {
+                console.log('something unpleasant has occured.')
+
+            },
+
+            success: function (data) {
+                console.log(data);
+                if (data.unique) {
+                    idCheck = true;
+                    $('#id-warning').hide();
+                }
+                else {
+                    idCheck = false;
+                    $('#id-warning').show();
+                }
+            }
+
+
+        });
+    }
+
+
     setJoinButtonActive();
 
 }
