@@ -24,6 +24,11 @@ function checkId(){
     if (input.length > 0 &&input.length < 6){
         idCheck = false;
         $('#id-short-warning').show();
+        $('#id-warning').hide();
+    }
+    else if (input.length == 0){
+        $('#id-short-warning').hide();
+
     }
     else {
         $('#id-short-warning').hide();
