@@ -82,22 +82,18 @@
 
         <div class="container" id="main">
 
-                   <div class="jumbotron">
-                       <h1 class="display-3">안녕하세요.</h1>
-                       <p class="lead">마이갤러리에 오신 것을 환영합니다.</p>
-                       <p>사진을 올리고, 내가 원하는 사람들과 공유할 수 있는 서비스입니다.</p>
-                       <a class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-user"></span> 로그인 </a>
-                       <a class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-pencil"></span> 회원가입 </a>
+            <div class="panel panel-default" id="panel">
+                <div class="panel-body">
+                    <h1>로그인된 사용자만 볼 수 있습니다.</h1>
+                    <br>먼저 로그인 한 후에 사용해 주세요.
 
-
-                </div>
-            </div>
+        </div>
 
 
 
 
 
-</div>
+    </div>
 
 
 
@@ -105,25 +101,25 @@
 
 
 
-<!-- jQuery CDN -->
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<!-- Bootstrap Js CDN -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="js/join.js"></script>
-<script src="js/upload-image.js"></script>
-<script src="js/categories.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/join.js"></script>
+    <script src="js/upload-image.js"></script>
+    <script src="js/categories.js"></script>
 
 
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#sidebarCollapse').on('click', function () {
-            $('#glyphicon glyphicon-align-left').html("<span>사이드바 펼치기</span>")
-            $('#sidebar').toggleClass('active');
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#glyphicon glyphicon-align-left').html("<span>사이드바 펼치기</span>")
+                $('#sidebar').toggleClass('active');
 
 
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>
